@@ -1,0 +1,60 @@
+body{
+    font-family: 'poppins';
+}
+
+
+@keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes spin2 {
+    0% {
+      stroke-dasharray: 1, 800;
+      stroke-dashoffset: 0;
+    }
+    50% {
+      stroke-dasharray: 400, 400;
+      stroke-dashoffset: -200px;
+    }
+    100% {
+      stroke-dasharray: 800, 1;
+      stroke-dashoffset: -800px;
+    }
+  }
+
+  .spin2 {
+    transform-origin: center;
+    animation: spin2 6s ease-out infinite,
+      spin 6s linear infinite;
+    animation-direction: alternate;
+  }
+
+  @keyframes blink {
+    50% { opacity: 0; }
+  }
+  .animate-blink {
+    animation: blink infinite;
+  }
+  
+/*   
+  .heroSection::after {
+    content: '';
+    position: absolute;
+    bottom: -100px;
+    width: 100%;
+    height: 100px;
+    background: rgb(30,136,229);
+    background: linear-gradient(349deg, rgba(30,136,229,1) 25%, rgba(30,136,229,1) 100%);
+    transform: skewY(-3deg);
+  }
+  .heroSection::before {
+    content: '';
+    position: absolute;
+    bottom: -100px;
+    width: 100%;
+    height: 100px;
+    background: #333333;
+    transform: skewY(0deg);
+  } */
